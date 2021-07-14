@@ -6,12 +6,21 @@ function getMiddleValue () {
     if (!Boolean(txt)) {
         document.getElementById("empty").innerHTML = "Invalid value";
     }
-    else if (x%2==0) {
+    else {
+        document.getElementById("empty").innerHTML = "";
+    }
+    if (x%2==0) {
         var r = txt[x/2 - 1] + txt[x/2];
         document.getElementById("even").innerHTML = r;
     }
     else {
+        document.getElementById("even").innerHTML = "";
+    }
+    if (x%2==1) {
         var r = txt[Math.floor(x/2)];
         document.getElementById("odd").innerHTML = r;
+    }
+    else {
+        document.getElementById("odd").innerHTML = "";
     }
 }
